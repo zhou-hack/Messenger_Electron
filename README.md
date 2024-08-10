@@ -32,7 +32,8 @@ _Using Messenger on your computer within Electron_
 | F7 | 完全退出APP |
 | F12 | 打开DevTools |
 
-关闭界面后, `Messenger_Electron`将会留存在托盘, 此时右键可以选择显示窗口或完全退出APP 
+关闭界面后, `Messenger_Electron`将会留存在托盘, 此时右键可以选择显示窗口或完全退出APP
+
 ## Screenshots
 
 <img src="./docs/res/pic/Messenger_main.png">
@@ -49,7 +50,7 @@ _Using Messenger on your computer within Electron_
 
 #### 克隆本仓库
 
-``` git clone --depth=1 https://github.com/zhou-hack/Messenger_Electron``` 
+``` git clone --depth=1 https://github.com/zhou-hack/Messenger_Electron ``` 
 
 ``` git clone --depth=1 https://gitee.com/zhou-hack/Messenger_Electron ```
 
