@@ -10,7 +10,9 @@ _Using Messenger on your computer within Electron_
 
 ## Introduce
 
-一个基于`Messenger 网页版`和`Electron`所制作的Messenger APP, 目前可以实现Messenger网页版所有功能
+一个基于`Messenger 网页版`和`Electron`所制作的Messenger APP
+
+目前可以实现Messenger网页版所有功能
 
 ## Why
 
@@ -39,6 +41,12 @@ _Using Messenger on your computer within Electron_
 
 ## Development
 
+#### 注意
+
+本仓库默认使用`electron-builder`进行Windows端的编译
+
+如您有其他平台的编译需求, 请自行调整`package.json`
+
 #### 克隆本仓库
 
 ``` git clone --depth=1 https://github.com/zhou-hack/Messenger_Electron``` 
@@ -51,3 +59,11 @@ _Using Messenger on your computer within Electron_
 
 #### 运行
 ``` npm start ```
+
+#### 编译
+
+*Windows*
+
+``` npm run build ```
+
+
