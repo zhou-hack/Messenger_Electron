@@ -59,7 +59,7 @@ if (!gotTheLock) {
       }
     });
 
-    // 按下 F7 时退出进程
+    // 按下 F7 时退出进程 4DEBUG
     mainWindow.webContents.on('before-input-event', (event, input) => {
       if (input.key === 'F7') {
         console.log('[Log][NORMAL] F7 Pressed, Exiting...')
@@ -83,32 +83,13 @@ if (!gotTheLock) {
       console.log('[Log][ClassRemover] StartCount: 2.5s');
       const classSelector = '.x9f619.x1n2onr6.x1ja2u2z.x78zum5.x1r8uery.xs83m0k.xeuugli.x1qughib.x6s0dn4.xozqiw3.x1q0g3np.xknmibj.x1c4vz4f.xt55aet.xexx8yu.xc73u3c.x18d9i69.x5ib6vp.x1lku1pv';
       mainWindow.webContents.executeJavaScript(`
-        document.title = 'Messenger Electron by her23dev';
-        setTimeout(() => {
-          document.querySelectorAll('${classSelector}').forEach(element => element.remove());
-        }, 2500);
-
-        // 监听标题变化并通知主进程
-        let originalTitle = document.title;
-        Object.defineProperty(document, 'title', {
-          get: function() {
-            return originalTitle;
-          },
-          set: function(value) {
-            if (originalTitle !== value) {
-              originalTitle = value;
-              // 通知主进程标题已更改
-              require('electron').ipcRenderer.send('title-changed', value);
-            }
-          }
-        });
-      `).then((result) => {
-        console.log('[Log][ClassRemover] Completed');
-      }).catch((error) => {
-        console.error('[Log][ClassRemover] Failed: ', error);
+    document.title = 'Messenger Electron by her23dev';
+    setTimeout(() => {
+      document.querySelectorAll('${classSelector}').forEach(element => element.remove());
+    }, 2500);
+      `);
       });
-    });
-  }
+    }
 
   // 创建托盘图标
   function createTray() {
