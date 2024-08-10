@@ -1,0 +1,12 @@
+.containerTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.iconPicture,
+.h2title {
+    margin: 0;
+}

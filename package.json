@@ -1,0 +1,35 @@
+{
+  "name": "messenger-electron",
+  "version": "1.2.0",
+  "author": "her23dev",
+  "description": "A messenger application on electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "build": {
+    "appId": "org.her23dev.messenger.electron",
+    "productName": "Messenger",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "preload.js",
+      "icons/logo.ico",
+      "package.json"
+    ],
+    "win": {
+      "icon": "icons/logo.ico",
+      "target": [
+        "nsis"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^23.0.0",
+    "electron-builder": "^23.0.0"
+  }
+}
